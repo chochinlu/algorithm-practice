@@ -29,9 +29,11 @@ describe('LinkedList Stack', () => {
     sentinel.push(31)
     sentinel.push(72)
     sentinel.push(47)
-    sentinel.pop()
-    sentinel.pop()
+    const pop1 = sentinel.pop()
+    const pop2 = sentinel.pop()
 
+    expect(pop1?.value).toBe(47)
+    expect(pop2?.value).toBe(72)
     expect(iterate(sentinel)).toEqual([31])
   })
 

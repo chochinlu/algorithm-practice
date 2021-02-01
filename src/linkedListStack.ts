@@ -11,12 +11,13 @@ export class Cell {
     this.next = new Cell(value, this.next)
   }
 
-  pop() {
+  pop(): Cell | null {
     const next = this.next
     if (next === null) {
-      return
+      return null
     }
     this.next = next.next
+    return next
   }
 }
 

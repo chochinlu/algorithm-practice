@@ -1,8 +1,8 @@
-import { Cell, LinkedList } from '../src/linkedList2'
+import { Cell, DoublyLinkedList } from '../src/doublyLinkedList2'
 
-describe('linked list 2', () => {
+describe('doubly linked list 2', () => {
   it('add cell at beginning', () => {
-    const list = new LinkedList()
+    const list = new DoublyLinkedList()
 
     list.addAtBeginning(new Cell(2))
     expect(list.iterate().length).toBe(1)
@@ -14,8 +14,9 @@ describe('linked list 2', () => {
     expect(list.iterate()[1]).toBe(2)
   })
 
-  it('add cell at end', () => {
-    const list = new LinkedList()
+  it('add at the end', () => {
+    const list = new DoublyLinkedList()
+
     list.addAtEnd(new Cell(2))
     expect(list.iterate().length).toBe(1)
     expect(list.iterate()[0]).toBe(2)
@@ -31,8 +32,8 @@ describe('linked list 2', () => {
     expect(list.iterate()[1]).toBe(2)
   })
 
-  it('find Cell', () => {
-    const list = new LinkedList()
+  it('find cell', () => {
+    const list = new DoublyLinkedList()
     list.addAtBeginning(new Cell(3))
     list.addAtBeginning(new Cell(2))
     list.addAtBeginning(new Cell(1))
@@ -45,7 +46,7 @@ describe('linked list 2', () => {
   })
 
   it('insert cell', () => {
-    const list = new LinkedList()
+    const list = new DoublyLinkedList()
     list.addAtBeginning(new Cell(3))
     list.addAtBeginning(new Cell(2))
     list.addAtBeginning(new Cell(1))
@@ -56,7 +57,7 @@ describe('linked list 2', () => {
   })
 
   it('delete after', () => {
-    const list = new LinkedList()
+    const list = new DoublyLinkedList()
     list.addAtBeginning(new Cell(3))
     list.addAtBeginning(new Cell(2))
     list.addAtBeginning(new Cell(1))

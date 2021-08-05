@@ -1,6 +1,6 @@
 import { Cell, DoublyLinkedList } from '../src/doublyLinkedList2'
 
-describe.only('doubly linked list 2', () => {
+describe('doubly linked list 2', () => {
   it('add cell at beginning', () => {
     const list = new DoublyLinkedList()
 

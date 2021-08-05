@@ -1,6 +1,6 @@
 import { Cell, DoublyLinkedList } from '../src/doublyLinkedList2'
 
-describe('doubly linked list 2', () => {
+describe.only('doubly linked list 2', () => {
   it('add cell at beginning', () => {
     const list = new DoublyLinkedList()
 
@@ -65,5 +65,15 @@ describe('doubly linked list 2', () => {
     list.deleteAfter(2)
     expect(list.iterate().length).toBe(2)
     expect(list.iterate()[1]).toBe(2)
+  })
+
+  it('reverse iterate', () => {
+    const list = new DoublyLinkedList()
+    list.addAtBeginning(new Cell(3))
+    list.addAtBeginning(new Cell(2))
+    list.addAtBeginning(new Cell(1))
+
+    const result = list.reverseIterate()
+    expect(result).toStrictEqual([3, 2, 1])
   })
 })

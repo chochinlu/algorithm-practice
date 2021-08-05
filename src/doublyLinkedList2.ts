@@ -31,6 +31,17 @@ export class DoublyLinkedList {
     return result
   }
 
+  reverseIterate(): Array<number | null> {
+    const result: Array<number | null> = []
+    let bottom = this.bottom
+    while (bottom.prev && bottom.prev.value) {
+      result.push(bottom.prev.value)
+      bottom = bottom.prev
+    }
+    return result
+  }
+
+  // Enqueue
   addAtBeginning(newCell: Cell) {
     newCell.next = this.top.next
     newCell.prev = this.top
@@ -77,7 +88,7 @@ export class DoublyLinkedList {
     let target = this.findCell(value)
     if (target !== null && target.next) {
       target.next = target.next.next
-      if (target.next &&  target.next.next) {
+      if (target.next && target.next.next) {
         target.next.next.prev = target
       }
     }

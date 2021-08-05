@@ -52,6 +52,7 @@ export class DoublyLinkedList {
     }
   }
 
+  // Dequeue
   addAtEnd(newCell: Cell) {
     newCell.next = this.bottom
     newCell.prev = this.bottom.prev

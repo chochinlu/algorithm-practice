@@ -13,3 +13,21 @@ export function insertionSort(array: number[]) {
   }
   return array
 }
+
+export function selectionSort(array: number[]) {
+  if (array.length <= 1) {
+    return array
+  }
+
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] < array[i]) {
+        let temp = array[j]
+        array[j] = array[i]
+        array[i] = temp
+      }
+    }
+  }
+
+  return array
+}

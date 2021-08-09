@@ -31,3 +31,24 @@ export function selectionSort(array: number[]) {
 
   return array
 }
+
+export function bubbleSort(array: number[]) {
+  if (array.length <= 1) {
+    return array
+  }
+
+  let notSorted = true
+  while (notSorted) {
+    notSorted = false
+    for (let i = 1; i < array.length; i++) {
+      if (array[i - 1] > array[i]) {
+        let temp = array[i]
+        array[i] = array[i - 1]
+        array[i - 1] = temp
+        notSorted = true
+      }
+    }
+  }
+
+  return array
+}

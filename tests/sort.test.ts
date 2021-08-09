@@ -1,4 +1,4 @@
-import { insertionSort, selectionSort } from '../src/sort'
+import { bubbleSort, insertionSort, selectionSort } from '../src/sort'
 
 describe('sort', () => {
   describe('insertion sort', () => {
@@ -8,10 +8,17 @@ describe('sort', () => {
     })
   })
 
-  describe.only('selection sort', () => {
+  describe('selection sort', () => {
     it('sort 1', () => {
       const array = [7, 4, 5, 2]
       expect(selectionSort(array)).toStrictEqual([2, 4, 5, 7])
+    })
+  })
+
+  describe('bubble sort', () => {
+    it('sort 1', () => {
+      const array = [7, 4, 5, 2]
+      expect(bubbleSort(array)).toStrictEqual([2, 4, 5, 7])
     })
   })
 })
